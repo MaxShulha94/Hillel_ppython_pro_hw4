@@ -6,25 +6,30 @@ import faker.providers.person
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('create_student', '0001_initial'),
+        ("create_student", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='student',
-            name='birth_date',
-            field=models.DateTimeField(default=faker.providers.date_time.Provider.date_of_birth),
+            model_name="student",
+            name="birth_date",
+            field=models.DateTimeField(
+                default=faker.providers.date_time.Provider.date_of_birth
+            ),
         ),
         migrations.AlterField(
-            model_name='student',
-            name='first_name',
-            field=models.CharField(default=faker.providers.person.Provider.first_name, max_length=100),
+            model_name="student",
+            name="first_name",
+            field=models.CharField(
+                default=faker.providers.person.Provider.first_name, max_length=100
+            ),
         ),
         migrations.AlterField(
-            model_name='student',
-            name='last_name',
-            field=models.CharField(default=faker.providers.person.Provider.last_name, max_length=100),
+            model_name="student",
+            name="last_name",
+            field=models.CharField(
+                default=faker.providers.person.Provider.last_name, max_length=100
+            ),
         ),
     ]

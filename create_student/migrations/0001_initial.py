@@ -6,20 +6,43 @@ import faker.providers.person
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Student',
+            name="Student",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('first_name', models.CharField(default=faker.providers.person.Provider.first_name, max_length=100)),
-                ('last_name', models.CharField(default=faker.providers.person.Provider.last_name, max_length=100)),
-                ('birth_date', models.DateTimeField(default=faker.providers.date_time.Provider.date_of_birth)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "first_name",
+                    models.CharField(
+                        default=faker.providers.person.Provider.first_name,
+                        max_length=100,
+                    ),
+                ),
+                (
+                    "last_name",
+                    models.CharField(
+                        default=faker.providers.person.Provider.last_name,
+                        max_length=100,
+                    ),
+                ),
+                (
+                    "birth_date",
+                    models.DateTimeField(
+                        default=faker.providers.date_time.Provider.date_of_birth
+                    ),
+                ),
             ],
         ),
     ]
