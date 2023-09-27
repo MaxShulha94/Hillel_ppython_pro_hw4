@@ -10,4 +10,4 @@ class Student(models.Model):
     birth_date = models.DateTimeField(default=fake.date_of_birth)
 
     def __str__(self):
-        return f'Name: {self.first_name}, Surname: {self.last_name}, Date of birth: {self.birth_date};'
+        return f"Name: {self.first_name}, Surname: {self.last_name}, Date of birth: {self.birth_date};"
